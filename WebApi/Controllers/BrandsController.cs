@@ -14,7 +14,7 @@ namespace WebApi.Controllers
         [HttpPost]
         public async Task<IActionResult> AddAsync([FromBody] CreateBrandCommand createBrandCommand)
         {
-            return Ok(await Mediator!.Send(createBrandCommand));
+            return Ok(await Mediator.Send(createBrandCommand));
         }
     }
 }
