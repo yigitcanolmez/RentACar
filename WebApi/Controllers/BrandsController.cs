@@ -10,10 +10,6 @@ namespace WebApi.Controllers
     [ApiController]
     public class BrandsController : BaseController
     {
-        public BrandsController()
-        {
-
-        }
         [HttpPost]
         public async Task<IActionResult> AddAsync([FromBody] CreateBrandCommand createBrandCommand)
         {
