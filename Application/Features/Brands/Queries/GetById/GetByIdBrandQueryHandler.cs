@@ -18,7 +18,7 @@ public class GetByIdBrandQueryHandler : IRequestHandler<GetByIdBrandQuery, GetBy
 
     public async Task<GetByIdBrandResponse> Handle(GetByIdBrandQuery request, CancellationToken cancellationToken)
     {
-        Brand? brand = await _brandRepository.GetAsync(p => p.Id == request.Id);
+        Brand? brand = await _brandRepository.GetAsync(p => p.Id == request.Id, token: cancellationToken);
 
         var response = _mapper.Map<GetByIdBrandResponse>(brand);
 
