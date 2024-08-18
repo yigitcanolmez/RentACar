@@ -17,7 +17,11 @@ public static class PersistenceServiceRegistration
         });
 
         services.AddScoped<IBrandRepository, BrandRepository>();
-        
+        services.AddScoped<ICarRepository, CarRepository>();
+        services.AddScoped<IFuelRepository, FuelRepository>();
+        services.AddScoped<IModelRepository, ModelRepository>();
+        services.AddScoped<ITransmissionRepository, TransmissionRepository>();
+
 
         return services;
     }
