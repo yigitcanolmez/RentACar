@@ -18,7 +18,7 @@ public class BaseDbContext : DbContext
                          IConfiguration configuration) : base(dbContextOptions)
     {
         Configuration = configuration;
-        Database.EnsureCreated();
+        //Database.EnsureCreated();
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
