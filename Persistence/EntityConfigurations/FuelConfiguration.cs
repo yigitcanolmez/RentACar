@@ -4,12 +4,12 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Persistence.EntityConfigurations;
 
-public class BrandConfiguration : IEntityTypeConfiguration<Brand>
+public class FuelConfiguration : IEntityTypeConfiguration<Fuel>
 {
-    public void Configure(EntityTypeBuilder<Brand> builder)
+    public void Configure(EntityTypeBuilder<Fuel> builder)
     {
 
-        builder.ToTable("Brands")
+        builder.ToTable("Fuels")
                .HasKey(b => b.Id);
 
         builder.Property(b => b.Id)
@@ -30,7 +30,7 @@ public class BrandConfiguration : IEntityTypeConfiguration<Brand>
         builder.Property(b => b.DeletedDate)
                .HasColumnName("DeletedDAte");
 
-        builder.HasIndex(indexExpression: b => b.Name, name: "UK_Brands_Name")
+        builder.HasIndex(indexExpression: b => b.Name, name: "UK_Fuels_Name")
                .IsUnique();
 
         builder.HasMany(b => b.Models);
