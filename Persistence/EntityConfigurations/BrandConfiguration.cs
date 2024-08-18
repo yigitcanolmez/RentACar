@@ -20,7 +20,7 @@ public class BrandConfiguration : IEntityTypeConfiguration<Brand>
                .HasColumnName("CreatedDate")
                .IsRequired();   
         
-        builder.Property(b => b.UpdateDate)
+        builder.Property(b => b.UpdatedDate)
                .HasColumnName("UpdatedDate");  
         
         builder.Property(b => b.DeletedDate)
